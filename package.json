@@ -29,7 +29,7 @@
     "date-fns": "^1.29.0",
     "express": "^4.16.4",
     "lighthouse": "^5.2.0",
-    "lit-html": "^1.0.0",
+    "lit-html": "^1.4.1",
     "memjs": "^1.2.0",
     "node-fetch": "^2.3.0",
     "node-sass": "^4.12.0"
