@@ -13,7 +13,9 @@
     "decrypt:service": "openssl aes-256-cbc -d -a -in serviceAccount.json.enc -out serviceAccount.json",
     "encrypt:memcache": "openssl aes-256-cbc -a -salt -in memcacheCredentials.json -out memcacheCredentials.json.enc",
     "decrypt:memcache": "openssl aes-256-cbc -d -a -in memcacheCredentials.json.enc -out memcacheCredentials.json",
-    "decrypt": "npm run decrypt:service && npm run decrypt:memcache"
+    "decrypt": "npm run decrypt:service && npm run decrypt:memcache",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "engines": {
     "node": ">=10"
@@ -32,11 +34,13 @@
     "lit-html": "^1.0.0",
     "memjs": "^1.2.0",
     "node-fetch": "^2.3.0",
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.12.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "rollup": "^1.1.2",
     "rollup-plugin-includepaths": "^0.2.3",
     "rollup-plugin-terser": "^4.0.4"
-  }
+  },
+  "snyk": true
 }
